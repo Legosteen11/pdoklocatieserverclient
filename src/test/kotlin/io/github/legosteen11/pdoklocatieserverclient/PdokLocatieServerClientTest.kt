@@ -41,8 +41,6 @@ class PdokLocatieServerClientTest {
     fun doBlockingFree() {
         //println("Free 'utrecht':")
 
-        //println(PdokLocatieServerClient.doBlockingFree("utrecht"))
-
         assertEquals(
                 Doc(bron = "BAG", identificatie = "0344", provinciecode="PV26", type=ObjectType.GEMEENTE, provincienaam="Utrecht", centroide_ll="POINT(5.07475463 52.09113813)", gemeentecode="0344", weergavenaam="Gemeente Utrecht", provincieafkorting="UT", centroide_rd="POINT(133587.205 455921.61)", id="gem-df0ca8ab37eccea5217e2a13f74d2833", gemeentenaam="Utrecht"),
                 PdokLocatieServerClient.doBlockingFree("utrecht").response.docs.first()
